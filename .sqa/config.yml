@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cyfronet-fid/marketplace:
+      branch: development
+      repo: https://github.com/cyfronet-fid/marketplace
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cyfronet-fid/marketplace git:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-jade-butterfly.sh
+        container: qc.acc_tacky-harlequin-wildebeest
+  QC.Doc:
+    repos:
+      github.com/cyfronet-fid/marketplace find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.stuffy-auburn-retriever.sh
+        container: qc.doc_breezy-violet-civet
+      github.com/cyfronet-fid/marketplace git:
+        commands:
+        - /usr/bin/env sh .sqa/script.crappy-salmon-seal.sh
+        container: qc.doc_crappy-cinnamon-hamster
+      github.com/cyfronet-fid/marketplace markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.scummy-lavender-greyhound.sh
+        container: qc.doc_silly-cardinal-birman
+  QC.Lic:
+    repos:
+      github.com/cyfronet-fid/marketplace licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.wimpy-sangria-gerbil.sh
+        container: qc.lic_lovely-ochre-tamarin
+  QC.Met:
+    repos:
+      github.com/cyfronet-fid/marketplace cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.sleepy-red-akbash.sh
+        container: qc.met_droopy-brown-toad
+  QC.Sty:
+    repos:
+      github.com/cyfronet-fid/marketplace jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.surly-gamboge-newt.sh
+        container: qc.sty_boozy-jade-lion
+      github.com/cyfronet-fid/marketplace rubocop:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-ochre-schnauzer.sh
+        container: qc.sty_cheeky-maroon-havanese
+  QC.Ver:
+    repos:
+      github.com/cyfronet-fid/marketplace get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.homely-heliotrope-birman.sh
+        container: qc.ver_nippy-pumpkin-whale
+timeout: 5400
