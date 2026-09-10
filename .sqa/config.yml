@@ -2,10 +2,10 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: main
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/cyfronet-fid/marketplace:
-      branch: development
+      branch: master
       repo: https://github.com/cyfronet-fid/marketplace
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,48 +15,52 @@ sqa_criteria:
     repos:
       github.com/cyfronet-fid/marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.flimsy-jade-butterfly.sh
-        container: qc.acc_tacky-harlequin-wildebeest
+        - /usr/bin/env sh .sqa/script.lilac_tranquil_baboon.sh
+        container: qc.acc_burgundy_elated_hyena
   QC.Doc:
     repos:
       github.com/cyfronet-fid/marketplace find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.stuffy-auburn-retriever.sh
-        container: qc.doc_breezy-violet-civet
+        - /usr/bin/env sh .sqa/script.raven_zany_kraken.sh
+        container: qc.doc_cinnabar_elated_grasshopper
       github.com/cyfronet-fid/marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-salmon-seal.sh
-        container: qc.doc_crappy-cinnamon-hamster
+        - /usr/bin/env sh .sqa/script.rose_passionate_wildcat.sh
+        container: qc.doc_claret_humorous_toad
       github.com/cyfronet-fid/marketplace markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.scummy-lavender-greyhound.sh
-        container: qc.doc_silly-cardinal-birman
+        - /usr/bin/env sh .sqa/script.flamingo_feisty_tarantula.sh
+        container: qc.doc_amethyst_determined_boar
   QC.Lic:
     repos:
       github.com/cyfronet-fid/marketplace licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wimpy-sangria-gerbil.sh
-        container: qc.lic_lovely-ochre-tamarin
+        - /usr/bin/env sh .sqa/script.dawn_vigilant_antelope.sh
+        container: qc.lic_forest_flexible_gecko
   QC.Met:
     repos:
       github.com/cyfronet-fid/marketplace cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.sleepy-red-akbash.sh
-        container: qc.met_droopy-brown-toad
+        - /usr/bin/env sh .sqa/script.paprika_loyal_viper.sh
+        container: qc.met_royal_silly_thrush
   QC.Sty:
     repos:
+      github.com/cyfronet-fid/marketplace hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.dusk_studious_squid.sh
+        container: qc.sty_thistle_open_jaguar
       github.com/cyfronet-fid/marketplace jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-gamboge-newt.sh
-        container: qc.sty_boozy-jade-lion
+        - /usr/bin/env sh .sqa/script.olive_exuberant_phoenix.sh
+        container: qc.sty_lagoon_thoughtful_kingfisher
       github.com/cyfronet-fid/marketplace rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-ochre-schnauzer.sh
-        container: qc.sty_cheeky-maroon-havanese
+        - /usr/bin/env sh .sqa/script.peach_proactive_owl.sh
+        container: qc.sty_lapis_reliable_viper
   QC.Ver:
     repos:
       github.com/cyfronet-fid/marketplace get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.homely-heliotrope-birman.sh
-        container: qc.ver_nippy-pumpkin-whale
+        - /usr/bin/env sh .sqa/script.chestnut_eager_cockatoo.sh
+        container: qc.ver_bone_loyal_emu
 timeout: 5400
