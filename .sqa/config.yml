@@ -15,52 +15,52 @@ sqa_criteria:
     repos:
       github.com/cyfronet-fid/marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.lilac_tranquil_baboon.sh
-        container: qc.acc_burgundy_elated_hyena
+        - /usr/bin/env sh .sqa/script.lapis_adaptable_uakari.sh
+        container: qc.acc_daffodil_peppy_warthog
   QC.Doc:
     repos:
       github.com/cyfronet-fid/marketplace find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.raven_zany_kraken.sh
-        container: qc.doc_cinnabar_elated_grasshopper
+        - /usr/bin/env sh .sqa/script.currant_tactful_kookaburra.sh
+        container: qc.doc_avocado_helpful_eagle
       github.com/cyfronet-fid/marketplace git:
         commands:
-        - /usr/bin/env sh .sqa/script.rose_passionate_wildcat.sh
-        container: qc.doc_claret_humorous_toad
+        - /usr/bin/env sh .sqa/script.sage_sad_osprey.sh
+        container: qc.doc_red_open_orangutan
       github.com/cyfronet-fid/marketplace markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.flamingo_feisty_tarantula.sh
-        container: qc.doc_amethyst_determined_boar
+        - /usr/bin/env sh .sqa/script.lapis_daring_coyote.sh
+        container: qc.doc_cinnabar_brave_cockatoo
   QC.Lic:
     repos:
       github.com/cyfronet-fid/marketplace licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.dawn_vigilant_antelope.sh
-        container: qc.lic_forest_flexible_gecko
+        - /usr/bin/env sh .sqa/script.magenta_reckless_bat.sh
+        container: qc.lic_dawn_hopeful_panda
   QC.Met:
     repos:
       github.com/cyfronet-fid/marketplace cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.paprika_loyal_viper.sh
-        container: qc.met_royal_silly_thrush
+        - /usr/bin/env sh .sqa/script.yellow_pensive_crow.sh
+        container: qc.met_grege_studious_seahorse
   QC.Sty:
     repos:
       github.com/cyfronet-fid/marketplace hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.dusk_studious_squid.sh
-        container: qc.sty_thistle_open_jaguar
+        - /usr/bin/env sh .sqa/script.purple_content_dolphin.sh
+        container: qc.sty_white_analytical_koala
       github.com/cyfronet-fid/marketplace jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.olive_exuberant_phoenix.sh
-        container: qc.sty_lagoon_thoughtful_kingfisher
+        - /usr/bin/env sh .sqa/script.red_proactive_mink.sh
+        container: qc.sty_snow_romantic_cassowary
       github.com/cyfronet-fid/marketplace rubocop:
         commands:
-        - /usr/bin/env sh .sqa/script.peach_proactive_owl.sh
-        container: qc.sty_lapis_reliable_viper
+        - /usr/bin/env sh .sqa/script.alabaster_analytical_crocodile.sh
+        container: qc.sty_strawberry_spirited_whale
   QC.Ver:
     repos:
       github.com/cyfronet-fid/marketplace get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.chestnut_eager_cockatoo.sh
-        container: qc.ver_bone_loyal_emu
+        - /usr/bin/env sh .sqa/script.kiwi_eager_dingo.sh
+        container: qc.ver_crimson_creative_ferret
 timeout: 5400
